@@ -11,7 +11,7 @@ print("Tabuleiro")
 for i in range(3):
     for j in range(3):
         print(velha[i][j], end=' ')
-    print()
+    print("")
 
 joga = 1
 ganhou = False

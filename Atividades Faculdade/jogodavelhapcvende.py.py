@@ -73,33 +73,33 @@ while qjog.upper() == 'S':
                 while pjpc1 == 0:
 
                     # jogadas na diagona1
-                    dg1 = velha[1][1]
+                    dg1 = velha[0][0]
                     # jogadas na diagona2
-                    dg2 = velha[1][3]
+                    dg2 = velha[0][2]
                     # jogadas na diagona3
-                    dg3 = velha[3][1]
+                    dg3 = velha[2][0]
                     # jogadas na diagona4
-                    dg4 = velha[3][3]
+                    dg4 = velha[2][2]
 
                     i = randint(1, 4)
 
                     if i == 1 and dg1 == "_":
-                        velha[1][1] = "0"
+                        velha[0][0] = "0"
                         pjpc1 = 1
                         joga += 1
                         pcjogs = 1
                     elif i == 2 and dg2 == "_":
-                        velha[1][3] = "0"
+                        velha[0][2] = "0"
                         pjpc1 = 1
                         joga += 1
                         pcjogs = 1
                     elif i == 3 and dg3 == "_":
-                        velha[3][1] = "0"
+                        velha[2][0] = "0"
                         pjpc1 = 1
                         joga += 1
                         pcjogs = 1
                     elif i == 4 and dg4 == "_":
-                        velha[3][3] = "0"
+                        velha[2][2] = "0"
                         pjpc1 = 1
                         joga += 1
                         pcjogs = 1
@@ -108,20 +108,20 @@ while qjog.upper() == 'S':
                 while pjpc1 == 1 and pjpc2 == 0:
 
                     # canto 1
-                    if velha[1][1] == "0" and velha[1][2] == "_" and velha[1][3] == "_":
-                        velha[1][3] = "0"
+                    if velha[0][0] == "0" and velha[0][1] == "_" and velha[0][2] == "_":
+                        velha[0][2] = "0"
                         joga += 1
                         pjpc2 = 1
                         pcjogs = 1
-                    elif velha[1][1] == "0" and velha[2][1] == "_" and velha[3][1] == "_":
-                        velha[1][3] = "0"
+                    elif velha[0][0] == "0" and velha[1][0] == "_" and velha[2][0] == "_":
+                        velha[0][2] = "0"
                         joga += 1
                         pjpc2 = 1
                         pcjogs = 1
 
                     # canto 2
-                    elif velha[1][3] == "0" and velha[1][2] == "_" and velha[1][1] == "_":
-                        velha[1][1] = "0"
+                    elif velha[0][2] == "0" and velha[0][1] == "_" and velha[0][0] == "_":
+                        velha[0][0] = "0"
                         joga += 1
                         pjpc2 = 1
                         pcjogs = 1

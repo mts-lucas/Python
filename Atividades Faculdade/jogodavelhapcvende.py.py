@@ -125,32 +125,32 @@ while qjog.upper() == 'S':
                         joga += 1
                         pjpc2 = 1
                         pcjogs = 1
-                    elif velha[1][3] == "0" and velha[2][3] == "_" and velha[3][3] == "_":
-                        velha[3][3] = "0"
+                    elif velha[0][2] == "0" and velha[1][2] == "_" and velha[2][2] == "_":
+                        velha[2][2] = "0"
                         joga += 1
                         pjpc2 = 1
                         pcjogs = 1
 
                     # canto 3
-                    elif velha[3][1] == "0" and velha[3][2] == "_" and velha[3][3] == "_":
-                        velha[3][3] = "0"
+                    elif velha[2][0] == "0" and velha[2][1] == "_" and velha[2][2] == "_":
+                        velha[2][2] = "0"
                         joga += 1
                         pjpc2 = 1
                         pcjogs = 1
-                    elif velha[3][1] == "0" and velha[2][1] == "_" and velha[1][1] == "_":
-                        velha[3][3] = "0"
+                    elif velha[2][0] == "0" and velha[1][0] == "_" and velha[0][0] == "_":
+                        velha[2][2] = "0"
                         joga += 1
                         pjpc2 = 1
                         pcjogs = 1
 
                     # canto 4
-                    elif velha[3][3] == "0" and velha[3][2] == "_" and velha[3][1] == "_":
-                        velha[3][1] = "0"
+                    elif velha[2][2] == "0" and velha[2][1] == "_" and velha[2][0] == "_":
+                        velha[2][0] = "0"
                         joga += 1
                         pjpc2 = 1
                         pcjogs = 1
-                    elif velha[3][3] == "0" and velha[2][3] == "_" and velha[1][3] == "_":
-                        velha[1][3] = "0"
+                    elif velha[2][2] == "0" and velha[1][2] == "_" and velha[0][2] == "_":
+                        velha[0][2] = "0"
                         joga += 1
                         pjpc2 = 1
                         pcjogs = 1
@@ -160,117 +160,117 @@ while qjog.upper() == 'S':
                 # jogadas nas linhas
                 # linha 1
 
-                if velha[1][1] == velha[1][2] and velha[1][1] == "X" and velha[1][3] == "_":
-                    velha[1][3] = "0"
+                if velha[0][0] == velha[0][1] and velha[0][0] == "X" and velha[0][2] == "_":
+                    velha[0][2] = "0"
                     joga += 1
                     pcjogs = 1
-                elif velha[1][2] == velha[1][3] and velha[1][2] == "X" and velha[1][1] == "_":
-                    velha[1][1] = "0"
+                elif velha[0][1] == velha[0][2] and velha[0][1] == "X" and velha[0][0] == "_":
+                    velha[0][0] = "0"
                     joga += 1
                     pcjogs = 1
-                elif velha[1][1] == velha[1][3] and velha[1][1] == "X" and velha[1][2] == "_":
-                    velha[1][2] = "0"
+                elif velha[0][0] == velha[0][2] and velha[0][0] == "X" and velha[0][1] == "_":
+                    velha[0][1] = "0"
                     joga += 1
                     pcjogs = 1
 
                 # linha 2
 
-                elif velha[2][1] == velha[2][2] and velha[2][1] == "X" and velha[2][3] == "_":
-                    velha[2][3] = "0"
+                elif velha[1][0] == velha[1][1] and velha[1][0] == "X" and velha[1][2] == "_":
+                    velha[1][2] = "0"
                     joga += 1
                     pcjogs = 1
-                elif velha[2][2] == velha[2][3] and velha[2][2] == "X" and velha[2][1] == "_":
-                    velha[2][1] = "0"
+                elif velha[1][1] == velha[1][2] and velha[1][1] == "X" and velha[1][0] == "_":
+                    velha[1][0] = "0"
                     joga += 1
                     pcjogs = 1
-                elif velha[2][1] == velha[2][3] and velha[2][1] == "X" and velha[2][2] == "_":
-                    velha[2][2] = "0"
+                elif velha[1][0] == velha[1][2] and velha[1][0] == "X" and velha[1][1] == "_":
+                    velha[1][1] = "0"
                     joga += 1
                     pcjogs = 1
 
                 # Linha 3
 
-                elif velha[3][1] == velha[3][2] and velha[3][1] == "X" and velha[3][3] == "_":
-                    velha[3][3] = "0"
+                elif velha[2][0] == velha[2][1] and velha[2][0] == "X" and velha[2][2] == "_":
+                    velha[2][2] = "0"
                     joga += 1
                     pcjogs = 1
-                elif velha[3][2] == velha[3][3] and velha[3][2] == "X" and velha[3][1] == "_":
-                    velha[3][1] = "0"
+                elif velha[2][1] == velha[2][2] and velha[2][1] == "X" and velha[2][0] == "_":
+                    velha[2][0] = "0"
                     joga += 1
                     pcjogs = 1
-                elif velha[3][1] == velha[3][3] and velha[3][1] == "X" and velha[3][2] == "_":
-                    velha[3][2] = "0"
+                elif velha[2][0] == velha[2][2] and velha[2][0] == "X" and velha[2][1] == "_":
+                    velha[2][1] = "0"
                     joga += 1
                     pcjogs = 1
                 # jogadas nas colunas faltando linha 3
 
-                elif velha[1][1] == velha[2][1] and velha[1][1] == "X" and velha[3][1] == "_":
-                    velha[3][1] = "0"
+                elif velha[0][0] == velha[1][0] and velha[0][0] == "X" and velha[2][0] == "_":
+                    velha[2][0] = "0"
                     joga += 1
                     pcjogs = 1
-                elif velha[1][2] == velha[2][2] and velha[1][2] == "X" and velha[3][2] == "_":
-                    velha[3][2] = "0"
+                elif velha[0][1] == velha[1][1] and velha[0][1] == "X" and velha[2][1] == "_":
+                    velha[2][1] = "0"
                     joga += 1
                     pcjogs = 1
-                elif velha[1][3] == velha[2][3] and velha[1][3] == "X" and velha[3][3] == "_":
-                    velha[3][3] = "0"
+                elif velha[0][2] == velha[1][2] and velha[0][2] == "X" and velha[2][2] == "_":
+                    velha[2][2] = "0"
                     joga += 1
                     pcjogs = 1
 
                 # jogadas nas colunas faltando linha 2
 
-                elif velha[1][1] == velha[3][1] and velha[1][1] == "X" and velha[2][1] == "_":
-                    velha[2][1] = "0"
+                elif velha[0][0] == velha[2][0] and velha[0][0] == "X" and velha[1][0] == "_":
+                    velha[1][0] = "0"
                     joga += 1
                     pcjogs = 1
-                elif velha[1][2] == velha[3][2] and velha[1][2] == "X" and velha[2][2] == "_":
-                    velha[2][2] = "0"
+                elif velha[0][1] == velha[2][1] and velha[0][1] == "X" and velha[1][1] == "_":
+                    velha[1][1] = "0"
                     joga += 1
                     pcjogs = 1
-                elif velha[1][3] == velha[3][3] and velha[1][3] == "X" and velha[2][3] == "_":
-                    velha[2][3] = "0"
+                elif velha[0][2] == velha[2][2] and velha[0][2] == "X" and velha[1][2] == "_":
+                    velha[1][2] = "0"
                     joga += 1
                     pcjogs = 1
 
                 # jogadas nas colunas faltando linha 1
 
-                elif velha[2][1] == velha[3][1] and velha[2][1] == "X" and velha[1][1] == "_":
-                    velha[1][1] = "0"
+                elif velha[1][0] == velha[2][0] and velha[1][0] == "X" and velha[0][0] == "_":
+                    velha[0][0] = "0"
                     joga += 1
                     pcjogs = 1
-                elif velha[2][2] == velha[3][2] and velha[2][2] == "X" and velha[1][2] == "_":
-                    velha[1][2] = "0"
+                elif velha[1][1] == velha[2][1] and velha[1][1] == "X" and velha[0][1] == "_":
+                    velha[0][1] = "0"
                     joga += 1
                     pcjogs = 1
-                elif velha[2][3] == velha[3][3] and velha[2][3] == "X" and velha[1][3] == "_":
-                    velha[1][3] = "0"
+                elif velha[1][2] == velha[2][2] and velha[1][2] == "X" and velha[0][2] == "_":
+                    velha[0][2] = "0"
                     joga += 1
                     pcjogs = 1
 
                 # jogadas nas diagonais
 
-                elif velha[1][1] == velha[2][2] and velha[1][1] == "X" and velha[3][3] == "_":
-                    velha[3][3] = "0"
-                    joga += 1
-                    pcjogs = 1
-                elif velha[1][1] == velha[3][3] and velha[1][1] == "X" and velha[2][2] == "_":
+                elif velha[0][0] == velha[1][1] and velha[0][0] == "X" and velha[2][2] == "_":
                     velha[2][2] = "0"
                     joga += 1
                     pcjogs = 1
-                elif velha[3][3] == velha[2][2] and velha[3][3] == "X" and velha[1][1] == "_":
+                elif velha[0][0] == velha[2][2] and velha[0][0] == "X" and velha[1][1] == "_":
                     velha[1][1] = "0"
                     joga += 1
                     pcjogs = 1
-                elif velha[1][3] == velha[2][2] and velha[2][2] == "X" and velha[3][1] == "_":
-                    velha[3][1] = "0"
+                elif velha[2][2] == velha[1][1] and velha[2][2] == "X" and velha[0][0] == "_":
+                    velha[0][0] = "0"
                     joga += 1
                     pcjogs = 1
-                elif velha[1][3] == velha[3][1] and velha[1][3] == "X" and velha[2][2] == "_":
-                    velha[2][2] = "0"
+                elif velha[0][2] == velha[1][1] and velha[1][1] == "X" and velha[2][0] == "_":
+                    velha[2][0] = "0"
                     joga += 1
                     pcjogs = 1
-                elif velha[3][1] == velha[2][2] and velha[2][2] == "X" and velha[1][3] == "_":
-                    velha[1][3] = "0"
+                elif velha[0][2] == velha[2][0] and velha[0][2] == "X" and velha[1][1] == "_":
+                    velha[1][1] = "0"
+                    joga += 1
+                    pcjogs = 1
+                elif velha[2][0] == velha[1][1] and velha[1][1] == "X" and velha[0][2] == "_":
+                    velha[0][2] = "0"
                     joga += 1
                     pcjogs = 1
 

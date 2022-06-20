@@ -417,7 +417,7 @@ while qjog.upper() == 'S':
 
                         pcjogs = 1
 
-                elif joga <= 6 and not(pcganha):
+                elif joga >= 6 and not(pcganha):
 
                     if velha[0][0] == velha[0][2] and velha[0][0] == "0" and velha[0][1] == "_":
                         velha[0][1] = "0"

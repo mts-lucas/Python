@@ -19,65 +19,95 @@ while qjog.upper() == 'S':
     jogganha = False
     pcganha = False
     deuvelha = False
-    pjpc1 = 0  # varivel de controle da primeira jogada do pc
-    pjpc2 = 0  # varivel de controle da primeira jogada do pc
-    pjpc3 = 0
 
     while joga <= 9 and not(ganhou): 
 
         if joga == 9:
             ganhou = True
             deuvelha = True
+            invalidao = True
+            invalidax = True
 
         elif (velha[0][0] == velha[0][1]) and (velha[0][1] == velha[0][2]) and (velha[0][2] == 'X'):
             ganhou = True
             jogganha = True
+            invalidao = True
+            invalidax = True
         elif (velha[1][0] == velha[1][1]) and (velha[1][1] == velha[1][2]) and (velha[1][2] == 'X'):
             ganhou = True
             jogganha = True
+            invalidao = True
+            invalidax = True
         elif (velha[2][0] == velha[2][1]) and (velha[2][1] == velha[2][2]) and (velha[2][2] == 'X'):
             ganhou = True
             jogganha = True
+            invalidao = True
+            invalidax = True
         elif (velha[0][0] == velha[1][0]) and (velha[1][0] == velha[2][0]) and (velha[2][0] == 'X'):
             ganhou = True
             jogganha = True
+            invalidao = True
+            invalidax = True
         elif (velha[0][1] == velha[1][1]) and (velha[1][1] == velha[2][1]) and (velha[2][1] == 'X'):
             ganhou = True
             jogganha = True
+            invalidao = True
+            invalidax = True
         elif (velha[0][2] == velha[1][2]) and (velha[1][2] == velha[2][2]) and (velha[2][2] == 'X'):
             ganhou = True
             jogganha = True
+            invalidao = True
+            invalidax = True
         elif (velha[0][0] == velha[1][1]) and (velha[1][1] == velha[2][2]) and (velha[2][2] == 'X'):
             ganhou = True
             jogganha = True
+            invalidao = True
+            invalidax = True
         elif (velha[0][2] == velha[1][1]) and (velha[1][1] == velha[2][0]) and (velha[2][0] == 'X'):
             ganhou = True
             jogganha = True
-
+            invalidao = True
+            invalidax = True
         elif (velha[0][0] == velha[0][1]) and (velha[0][1] == velha[0][2]) and (velha[0][2] == '0'):
             ganhou = True
             pcganha = True
+            invalidao = True
+            invalidax = True
         elif (velha[1][0] == velha[1][1]) and (velha[1][1] == velha[1][2]) and (velha[1][2] == '0'):
             ganhou = True
             pcganha = True
+            invalidao = True
+            invalidax = True
         elif (velha[2][0] == velha[2][1]) and (velha[2][1] == velha[2][2]) and (velha[2][2] == '0'):
             ganhou = True
             pcganha = True
+            invalidao = True
+            invalidax = True
         elif (velha[0][0] == velha[1][0]) and (velha[1][0] == velha[2][0]) and (velha[2][0] == '0'):
             ganhou = True
             pcganha = True
+            invalidao = True
+            invalidax = True
         elif (velha[0][1] == velha[1][1]) and (velha[1][1] == velha[2][1]) and (velha[2][1] == '0'):
             ganhou = True
             pcganha = True
+            invalidao = True
+            invalidax = True
         elif (velha[0][2] == velha[1][2]) and (velha[1][2] == velha[2][2]) and (velha[2][2] == '0'):
             ganhou = True
             pcganha = True
+            invalidao = True
+            invalidax = True
         elif (velha[0][0] == velha[1][1]) and (velha[1][1] == velha[2][2]) and (velha[2][2] == '0'):
             ganhou = True
             pcganha = True
+            invalidao = True
+            invalidax = True
         elif (velha[0][2] == velha[1][1]) and (velha[1][1] == velha[2][0]) and (velha[2][0] == '0'):
             ganhou = True
             pcganha = True
+            invalidao = True
+            invalidax = True
         else:
             invalidao = False
             pcjogs = 0
@@ -88,7 +118,7 @@ while qjog.upper() == 'S':
 
                     # primeira jogada
 
-                    if pjpc1 == 0 and joga == 0:
+                    if joga == 0:
 
                         # jogadas na diagona1
                         dg1 = velha[0][0]
@@ -103,74 +133,62 @@ while qjog.upper() == 'S':
 
                         if i == 1 and dg1 == "_":
                             velha[0][0] = "0"
-                            pjpc1 = 1
                             joga += 1
                             pcjogs = 1
                         elif i == 2 and dg2 == "_":
                             velha[0][2] = "0"
-                            pjpc1 = 1
                             joga += 1
                             pcjogs = 1
                         elif i == 3 and dg3 == "_":
                             velha[2][0] = "0"
-                            pjpc1 = 1
                             joga += 1
                             pcjogs = 1
                         elif i == 4 and dg4 == "_":
                             velha[2][2] = "0"
-                            pjpc1 = 1
                             joga += 1
                             pcjogs = 1
 
                     # tentando jogar segunda jogada
-                    elif pjpc1 == 1 and pjpc2 == 0 and joga == 2:
+                    elif joga == 2:
 
                         # canto 1
                         if velha[0][0] == "0" and velha[0][1] == "_" and velha[0][2] == "_":
                             velha[0][2] = "0"
                             joga += 1
-                            pjpc2 = 1
                             pcjogs = 1
                         elif velha[0][0] == "0" and velha[1][0] == "_" and velha[2][0] == "_":
-                            velha[0][2] = "0"
+                            velha[2][0] = "0"
                             joga += 1
-                            pjpc2 = 1
                             pcjogs = 1
 
                         # canto 2
                         elif velha[0][2] == "0" and velha[0][1] == "_" and velha[0][0] == "_":
                             velha[0][0] = "0"
                             joga += 1
-                            pjpc2 = 1
                             pcjogs = 1
                         elif velha[0][2] == "0" and velha[1][2] == "_" and velha[2][2] == "_":
                             velha[2][2] = "0"
                             joga += 1
-                            pjpc2 = 1
                             pcjogs = 1
 
                         # canto 3
                         elif velha[2][0] == "0" and velha[2][1] == "_" and velha[2][2] == "_":
                             velha[2][2] = "0"
                             joga += 1
-                            pjpc2 = 1
                             pcjogs = 1
                         elif velha[2][0] == "0" and velha[1][0] == "_" and velha[0][0] == "_":
-                            velha[2][2] = "0"
+                            velha[0][0] = "0"
                             joga += 1
-                            pjpc2 = 1
                             pcjogs = 1
 
                         # canto 4
                         elif velha[2][2] == "0" and velha[2][1] == "_" and velha[2][0] == "_":
                             velha[2][0] = "0"
                             joga += 1
-                            pjpc2 = 1
                             pcjogs = 1
                         elif velha[2][2] == "0" and velha[1][2] == "_" and velha[0][2] == "_":
                             velha[0][2] = "0"
                             joga += 1
-                            pjpc2 = 1
                             pcjogs = 1
 
                     elif joga >= 4 and joga < 6:
@@ -412,7 +430,7 @@ while qjog.upper() == 'S':
                             joga += 1
                             pcjogs = 1
 
-                    elif pjpc3 == 0 and pjpc2 == 1 and joga == 3:  # terceira jogada
+                    elif joga == 4:  # terceira jogada
 
                         if velha[0][0] == velha[0][2] and velha[0][0] == "0" and velha[0][1] == "_":
                             velha[0][1] = "0"
@@ -426,7 +444,7 @@ while qjog.upper() == 'S':
                             velha[1][2] = "0"
                             joga += 1
                             pcjogs = 1
-                        elif velha[0][2] == velha[2][0] and velha[0][2] == "0" and velha[2][1] == "_":
+                        elif velha[2][2] == velha[2][0] and velha[2][2] == "0" and velha[2][1] == "_":
                             velha[2][1] = "0"
                             joga += 1
                             pcjogs = 1
@@ -450,46 +468,39 @@ while qjog.upper() == 'S':
                         elif velha[0][0] == velha[0][2] and velha[0][0] == "0" and velha[2][0] == "_":
                             velha[2][0] = "0"
                             joga += 1
-                            pjpc3 = 1
                             pcjogs = 1
 
                         elif velha[0][0] == velha[0][2] and velha[0][0] == "0" and velha[2][0] == "X":
                             velha[2][2] = "0"
                             joga += 1
-                            pjpc3 = 1
                             pcjogs = 1
 
                         elif velha[0][0] == velha[2][0] and velha[0][0] == "0" and velha[0][2] == "_":
                             velha[0][2] = "0"
                             joga += 1
-                            pjpc3 = 1
                             pcjogs = 1
                         elif velha[0][0] == velha[2][0] and velha[0][0] == "0" and velha[0][2] == "X":
                             velha[2][2] = "0"
                             joga += 1
-                            pjpc3 = 1
                             pcjogs = 1
 
                         elif velha[2][0] == velha[2][2] and velha[2][0] == "0" and velha[0][0] == "_":
                             velha[0][0] = "0"
                             joga += 1
-                            pjpc3 = 1
                             pcjogs = 1
                         elif velha[2][0] == velha[2][2] and velha[2][0] == "0" and velha[0][0] == "X":
                             velha[0][2] = "0"
                             joga += 1
-                            pjpc3 = 1
                             pcjogs = 1
 
                         elif velha[2][2] == velha[0][2] and velha[2][2] == "0" and velha[2][0] == "_":
                             velha[2][0] = "0"
                             joga += 1
-                            pjpc3 = 1
                             pcjogs = 1
                         elif velha[2][2] == velha[0][2] and velha[2][2] == "0" and velha[2][0] == "X":
                             velha[0][0] = "0"
                             joga += 1
-                            pjpc3 = 1
+
                             pcjogs = 1
 
                     elif joga <= 6 and not(pcganha):

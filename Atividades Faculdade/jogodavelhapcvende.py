@@ -191,7 +191,7 @@ while qjog.upper() == 'S':
                             joga += 1
                             pcjogs = 1
 
-                    elif joga >= 4 and joga < 6:
+                    elif joga > 4 and joga < 6:
                         # atrapalhando o jogador
 
                         # jogadas nas linhas

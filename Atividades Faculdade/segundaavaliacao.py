@@ -11,3 +11,4 @@ print(f"O quadrado de {j} é {soma}")
 
 
 print("Questão 3\n")
+print("Calculo da idade do seu cachorro")

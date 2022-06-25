@@ -1,4 +1,3 @@
-from cProfile import label
 import random
 import matplotlib.pyplot
 

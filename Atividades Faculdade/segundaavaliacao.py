@@ -38,6 +38,7 @@ while q != "0":
 
         print("Questão 1\n")
         print("Questão 1 letra A\n")
+        print("Estado de todas as variaveis do programa em cada linha:\n")
         print(f"linhas - lista: ____, tam = _____, i:   , chave: ____ , k: ____ \n")
 
         lista = [80, 85, 22, 91, 10]

@@ -42,33 +42,50 @@ while esc != "0":
 
     elif esc == "2":
 
-        print("Seus contatos")
-        print()
-
-        for i in agenda:
-            # print("Nome:\t", i[0])
-            # print("fone:\t", i[1])
-            # print("E-mail:\t", i[2])
-            # print()
-            print(f"Nome:\t {i[0]} ")
-            print(f"E-mail:\t {i[1]} ")
-            print(f"Fone:\t {i[2]} ")
-            print()
-
-    elif esc == "5":
-
         print("Consulta")
         print()
         nomeb = input("Qual o nome à buscar? ")
         achou = False
         for pessoa in agenda:
 
-            if nomeb.upper() in pessoa[0].upper() :
+            if nomeb.upper() in pessoa[0].upper():
                 achou = True
                 print(f"Nome:\t {pessoa[0]} ")
                 print(f"E-mail:\t {pessoa[1]} ")
                 print(f"Fone:\t {pessoa[2]} ")
                 print()
+
+    elif esc == "4":
+
+        print("\nVamos Apagar um dos seus contatos\n")
+        nomeb = input("Qual o nome do contato que deseja apagar? ")
+        achou = False
+        cont = 0
+        for pessoa in agenda:
+            cont += 1
+
+            if nomeb.upper() in pessoa[0].upper():
+                achou = True
+                print(f"Nome:\t {pessoa[0]} ")
+                print(f"E-mail:\t {pessoa[1]} ")
+                print(f"Fone:\t {pessoa[2]} ")
+                print()
+                delt = input("Deseja mesmo apagar esse contato?")
+                if delt.upper == "SIM":
+                    agenda.pop((cont - 1))
+
+    elif esc == "5":
+
+        print("Seus contatos")
+        print()
+
+        for p in agenda:
+
+            print(f"Nome:\t {p[0]} ")
+            print(f"E-mail:\t {p[1]} ")
+            print(f"Fone:\t {p[2]} ")
+            print()
+
 
 # Incluir data de nascimento
 # Mostrar aniversariantes do mes

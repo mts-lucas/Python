@@ -1,2 +1,2 @@
 # Python
-Projetos pessoais e profissionais, além de atividades acadêmicas utilizando a linguagem Python
+Projetos pessoais, testes, além de atividades acadêmicas utilizando a linguagem Python

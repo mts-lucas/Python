@@ -37,6 +37,9 @@ if n >= 2:
 elif n == 1:
 
     print(an1)
+
+elif n == 2:
+    print(an2)
     
 elif n == 0: 
 

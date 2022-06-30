@@ -6,7 +6,7 @@ print("Pagina 2\n")
 
 print("Solução por recurção\n")
 
-#An = ((1,06)^n) * A(n-1)
+#An = ((1,06)^n) * A(n-1) + 200
 #A0 = 1000
 
 

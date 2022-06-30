@@ -39,3 +39,15 @@ elif n == 1:
 elif n == 0: 
 
     print(an0)
+
+print("\nSolução por Solução da Recursão:\n")
+
+def bn(n):
+    if n == 0:
+        return 4  # A0 da função
+    elif n == 1:
+        return 10  # A1 da função
+    else:
+
+        return ((3) * (4**n)) + (1 * ((-2)**n))
+print(bn(n))

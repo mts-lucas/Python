@@ -41,3 +41,18 @@ elif n == 1:
 elif n == 0: 
 
     print(None)
+
+
+# print("\nSolução por Solução da Recursão:\n")
+
+# def bn(n):
+#     if n == 1:
+#         return 1  # A0 da função
+#     elif n == 2:
+#         return 3  # A1 da função
+#     elif n == 0:
+#         return
+#     elif n >= 3:
+#         return 
+
+# print(bn(n))

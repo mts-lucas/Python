@@ -1,6 +1,0 @@
-{
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
-    "cSpell.language": "en,pt-BR",
-    "python.linting.pycodestyleEnabled": false
-}

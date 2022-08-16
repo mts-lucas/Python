@@ -1,3 +1,5 @@
+from random import randint
+
 class Pessoa: 
 
     ano_atual = 2022 #variaveis criadas fora de metodos são globais para a classe, isso é um atributo de classe
@@ -16,6 +18,14 @@ class Pessoa:
     def por_ano_nascimento(cls, nome, ano_nascimento): #por convenção se usa cls para metodos de classe(Pessoa), assim como self em metodos comuns
         idade = cls.ano_atual - ano_nascimento
         return cls(nome, idade) #cls chama a propria classe
+
+    #metodos estaticos não utilizam nem a classe nema instancia, é uma função normal que precisa estar dentro da classe
+
+    @staticmethod #atribuir que é um metodo estatico
+    def gera_id():
+        rand = randint(10000, 19999)
+        return rand
+
 
 
 

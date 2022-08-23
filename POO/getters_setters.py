@@ -11,14 +11,14 @@ class Produto():
     # Getter
     @property
     def preco(self):
-        return self._preco #no lugar de self.preco é pra ser isso
+        return self.valor #no lugar de self.preco é pra ser isso
     
     # Setter
     @preco.setter
     def preco(self, valor):
         if isinstance(valor, str): #esse if verifica se é uma string e etc e tranforma em float
             valor = float(valor.replace("RS", " "))
-        self._preco = valor #esse valor vai ser levado pro getter
+        self.valor = valor #esse valor vai ser levado pro getter
 
 
 

@@ -1,0 +1,1 @@
+# Associação = Usa,  Agregacao = Tem, Composição = É dono, Herança = É

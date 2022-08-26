@@ -2,9 +2,6 @@
 # a. Atributos: Tamanho do lado
 # b. Métodos: Mudar valor do Lado, Retornar valor do Lado e calcular Área;
 
-from traceback import print_tb
-
-
 class Quadrado:
     def __init__(self, lado):
         self.lado = lado

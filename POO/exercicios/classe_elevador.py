@@ -30,5 +30,8 @@ class Elevador():
         else:
             self.pessoas_presentes += 1
 
-    
-
+    def sair(self):
+        if self.pessoas_presentes >= 1:
+            self.pessoas_presentes -= 1
+        else:
+            print("Não há nínguem no elevador")

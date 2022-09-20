@@ -23,3 +23,7 @@ qd.muda_lado(2)
 print(qd.lado)
 print(qd.calcula_area())
 
+qd2 = Quadrado(7)
+
+print(qd2.calcula_area())
+

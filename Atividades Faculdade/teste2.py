@@ -1,7 +1,6 @@
-distancia = float(input("Insira a distanci entre os Palantir: "))
-diametro_sauron = float(input("Insira o diametro do Palantrir de sauron: "))
-diametro_saruman = float(input("Insira o diametro do Palantrir de saruman: "))
+import maskpass 
 
-icm = distancia / (diametro_sauron + diametro_saruman)
+cpf = maskpass.askpass(prompt = "CPF: ", mask = "*")
 
-print(f"o icm: entre O Palantrir de Saruman e o Palantrir de Sauron é de: {icm:.2f}")
+print(cpf)
+

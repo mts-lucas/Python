@@ -1,5 +1,6 @@
 # sets formam retiram elementos duplicados em iteraveis
 #set é um um conjunto que não é  acessavel por indices nem chaves como uma lista ou dic
+#funciona basicamente como conjuntos na matematica mesmo
 
 
 #forma menos comum de se usar:

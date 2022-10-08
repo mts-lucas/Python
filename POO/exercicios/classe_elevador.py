@@ -35,3 +35,9 @@ class Elevador():
             self.pessoas_presentes -= 1
         else:
             print("Não há nínguem no elevador")
+        
+    def subir(self):
+        if self.andar_atual >= len(self.total_andares):
+            print("Estamos no ultimo andar!")
+        else:
+            self.andar_atual += 1

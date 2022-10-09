@@ -1,5 +1,9 @@
 #getters e setters funcionam como filtros
 
+#property vc cria metodos q são reconhecidos como atributos, mt usando em atributos computados q vc não nescessariamente quer armazenar
+
+#setter ja serve justamente para eu conseguir mudar aquele valor do property de alguma forma
+
 class Produto():
     def __init__(self, nome, preco):
         self.nome = nome

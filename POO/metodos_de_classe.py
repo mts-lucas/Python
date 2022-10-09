@@ -6,7 +6,7 @@ class Pessoa:
 
     def __init__(self,nome, idade): 
 
-        
+ 
         
         self.nome = nome
         self.idade = idade
@@ -35,3 +35,4 @@ p1.get_nascimento()
 
 p2 = Pessoa.por_ano_nascimento("Lucas", 2000)
 print(p2.idade, p2.nome)
+print(Pessoa.gera_id())

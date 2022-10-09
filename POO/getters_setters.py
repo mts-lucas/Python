@@ -4,6 +4,8 @@
 
 #setter ja serve justamente para eu conseguir mudar aquele valor do property de alguma forma
 
+#servem principalmente pra lidar com atributos privados
+
 class Produto():
     def __init__(self, nome, preco):
         self.nome = nome

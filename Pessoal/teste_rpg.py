@@ -1,5 +1,10 @@
 from rpg_pybot.players.player import Player
 
+from rpg_pybot.dice.roll import roll
+
+print("Jogando 3 d6")
+roll(3, 6)
+
 lucas = Player("Lucas")
 samuca = Player("Samuca")
 

@@ -1,3 +1,5 @@
+#codigo que gera um png com graficos das seguintes equações
+
 import numpy as np
 import matplotlib.pyplot as plt
 

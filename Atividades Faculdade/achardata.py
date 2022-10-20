@@ -1,3 +1,5 @@
+#script que acha o dia da semana em que voce nasceu a partir de inpurts
+
 #resposta utilizando as bibliotecas do python
 
 import datetime

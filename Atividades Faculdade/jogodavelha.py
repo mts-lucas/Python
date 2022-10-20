@@ -1,3 +1,5 @@
+#codigo de um jogo da velha simples
+
 from random import randint
 
 velha = [

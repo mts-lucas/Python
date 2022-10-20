@@ -1,3 +1,5 @@
+#rola dados e printa na tela
+
 import random
 jog1 = random.randint(1,6)
 comp1 = random.randint(1,6)
@@ -10,43 +12,43 @@ if (jog1 == 1):
   print("primeiro dado jogador")
   print(".......")
   print(".     .")
-  print(".  .  .")
+  print(".  *  .")
   print(".     .")
   print(".......")
 if (jog1 == 2):
   print("primeiro dado jogador")
   print(".......")
-  print("..    .")
+  print(".*    .")
   print(".     .")
-  print(".    ..")
+  print(".    *.")
   print(".......")
 if (jog1 == 3):
   print("primeiro dado jogador")
   print(".......")
-  print("..    .")
-  print(".  .  .")
-  print(".    ..")
+  print(".*    .")
+  print(".  *  .")
+  print(".    *.")
   print(".......")
 if (jog1 == 4):
   print("primeiro dado jogador")
   print(".......")
-  print("..   ..")
+  print(".*   *.")
   print(".     .")
-  print("..   ..")
+  print(".*   *.")
   print(".......")
 if (jog1 == 5):
   print("primeiro dado jogador")
   print(".......")
-  print("..   ..")
-  print(".  .  .")
-  print("..   ..")
+  print(".*   *.")
+  print(".  *  .")
+  print(".*   *.")
   print(".......") 
 if (jog1 == 6):
   print("primeiro dado jogador")
   print(".......")
-  print("..   ..")
-  print("..   ..")
-  print("..   ..")
+  print(".*   *.")
+  print(".*   *.")
+  print(".*   *.")
   print(".......")
 
 # jogadas jogador 2

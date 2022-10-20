@@ -1,3 +1,5 @@
+#Script q gera valores pseudo aleatorios de tempearutura em um dia(seguindo uma logica de crescer durante a manha e ir caindo ate a noite estabilizar) e gerar um grafico com esses valores
+
 import random
 import matplotlib.pyplot
 

@@ -1,3 +1,5 @@
+#Script de um jogo que o player tenta adivinhar o numero que o pc sorteou e mostra uma msg de acordo com o tanto de tentativas
+
 import random
 
 print("TENTE ADIVINHAR O NÙMERO")

@@ -1,3 +1,5 @@
+#equação que calcula tempo de impacto de um objeto como chão
+
 print("PRECISAMOS ALETAR A TODOS O TEMPO QUE TEM PARA FUGIR!!\n ")
 h = float(input("Por favor insira a altura inicial do meteoro(m): "))
 v0 = 0

@@ -1,3 +1,5 @@
+#Avaliação segunda unidade feita em codigo
+
 from math import log
 
 q = " "

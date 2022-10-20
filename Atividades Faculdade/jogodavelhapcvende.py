@@ -1,3 +1,5 @@
+#jogo da velha em que o pc sempre vence
+
 from random import randint
 qjog = input('Quer jogar (S/N)? ')
 while qjog.upper() == 'S':

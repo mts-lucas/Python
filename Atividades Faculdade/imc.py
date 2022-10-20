@@ -1,3 +1,5 @@
+#calc de imc
+
 print("Calculadora de IMC\n")
 nome = input("por favor insira seu nome: ")
 peso = float(input("por favor insira seu peso em Kg: "))

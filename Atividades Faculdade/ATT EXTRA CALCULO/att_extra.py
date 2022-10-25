@@ -17,20 +17,28 @@ from numpy import*
 def verifica_tvm(valora, valorb, equacao=str):
 
     #calculando o ponto medio:
-
+    
     equacaoa = equacao
+    equacaoa = equacaoa.replace("x", (str(valora)))
     equacaob = equacao
-    funa = float(equacaoa.replace("x",  str(valora)))
-    funb = float(equacaob.replace("x",  str(valora)))
+    equacaob = equacaob.replace("x", (str(valorb)))
+
+    funa = float(eval(equacaoa))
+    funb = float(eval(equacaob))
     dervmed = (funb - funa)/(valorb - valora)
 
     constn = (valorb - valora) * 1000
     listax = linspace((valora + 0.001), (valorb - 0.001), num=constn)
     #para todo x dentro da lista
-    for xs in listax:
-        for char in equacao:
-            if char == 'x':
-                equacao.replace("x", str(xs))
+    equacaofor = equacao
+    for xs in listax:  
+    
+        equacaofor = equacaofor.replace("x", (str(xs)))
 
-        if float(equacao) == dervmed:
-            pass
+        result = float(eval(equacaofor))
+        if result == dervmed:
+            print(result)
+        else:     
+            equacaofor = equacao
+
+verifica_tvm(2, 5, "x**(1/2)")

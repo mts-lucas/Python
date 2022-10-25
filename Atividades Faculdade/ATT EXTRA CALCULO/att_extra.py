@@ -1,6 +1,9 @@
-import numpy as np
-import matplotlib.pyplot as plt
+# import numpy as np
+from numpy import*
+import sympy as sy
+# import matplotlib.pyplot as plt
 
+x = sy.symbol('x')
 # x = np.arange(1, 11)
 # print(x)
 
@@ -11,13 +14,12 @@ import matplotlib.pyplot as plt
 
 
 
-def verifica_tvm(valora, valorb, equacao):
+def verifica_tvm(valora, valorb, equacao=str):
     constn = (valorb - valora) * 1000
-    x = np.linspace((valora + 0.001), (valorb - 0.001), num=constn)
-    plt.plot(x, equacao, color='red')
-    plt.grid(True)
-    plt.title('Gráficos')
-    plt.legend()
-    plt.show()
-
-verifica_tvm(-5, 12, (3*x + 12))
+    listax = linspace((valora + 0.001), (valorb - 0.001), num=constn)
+    #para todo x dentro da lista
+    for xs in listax:
+        for char in equacao:
+            if char == 'x':
+                equacao.replace("x", "xs")
+            

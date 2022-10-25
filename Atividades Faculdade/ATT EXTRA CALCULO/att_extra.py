@@ -26,18 +26,23 @@ def verifica_tvm(valora, valorb, equacao=str):
     funa = float(eval(equacaoa))
     funb = float(eval(equacaob))
     dervmed = (funb - funa)/(valorb - valora)
+    print(dervmed)
 
     constn = (valorb - valora) * 1000
-    listax = linspace((valora + 0.001), (valorb - 0.001), num=constn)
+    listax = linspace(valora, valorb, num=constn)
+    print(listax)
     #para todo x dentro da lista
     equacaofor = equacao
     for xs in listax:  
-    
+        # print(xs)
         equacaofor = equacaofor.replace("x", (str(xs)))
 
         result = float(eval(equacaofor))
+        # print(result)
         if result == dervmed:
-            print(result)
+            print("ACHOU")
+            # print(result)
+            # break
         else:     
             equacaofor = equacao
 

@@ -4,16 +4,6 @@ from numpy import*
 import sympy as sy
 import matplotlib.pyplot as plt
 
-# x = sy.symbol('x')
-# x = np.arange(1, 11)
-# print(x)
-
-
-# plt.plot(x, 2*x, color='#17a589', label='f(x) = 2x') # green
-# plt.plot(x, x/2, color='red', label='f(x) = x/2')
-# plt.plot(x, x+3, color='#f4d03f', label='f(x) = x + 3') # yellow
-
-
 def verifica_tvm(valora, valorb, equacao=str):
 
     # calculando o ponto medio:
@@ -35,20 +25,16 @@ def verifica_tvm(valora, valorb, equacao=str):
     func_derivada = str(y.diff(x))
     print(func_derivada)
 
-    listay = []
+    media = []
     for xs in listax:
-        # print(xs)
         equacaofor = func_derivada.replace("x", (str(xs)))
 
         result = round((float(eval(equacaofor))), 5)
         # print(result)
         if (result - 0.0001 <= ponto_medio) and (result + 0.0001 >= ponto_medio):
-            pass
-            print("ACHOU")
-            print(result)
-
-        eqy = eval(equacao.replace("x", (str(valorb))))
-        listay.append(eqy)
+            media.append(result)
+            # print(result)
+            break
 
     #gerand graficos
 
@@ -59,12 +45,11 @@ def verifica_tvm(valora, valorb, equacao=str):
         eqy = float(eqy1)
         yg.append(eqy)
     
-    # plt.plot(listax, y, color='#17a589', label='funcao')  # green
-    
-    plt.plot([valora, funa], [valorb, funb], color='#f4d03f', label='Derivada do Ponto C')
+    media = round((sum(media)/len(media)), 5)
+    plt.plot([valora, funa], [valorb, funb], color='#f4d03f', label=str(media))
     plt.plot(xg, yg, color='#17a589', label='Função') # green
     plt.grid(True)
     plt.legend()
     plt.show()
 
-verifica_tvm(-20, 10, "(4*(x**2)) + x + 1")
+verifica_tvm(2, 5, "x**(1/2)")

@@ -24,11 +24,15 @@ class Venda:
         self.itens: list[Item] = itens
         self.total: float = self.totalizar()
 
+    # com loop for
+    # def totalizar(self) -> float:
+    #     soma: float = 0.0
+    #     for item in self.itens:
+    #         soma += item.total
+    #     return soma
+
     def totalizar(self) -> float:
-        soma: float = 0.0
-        for item in self.itens:
-            soma += item.total
-        return soma
+        return sum(map(lambda item: item.total, self.itens))
 
     def adicionar_item(self, item: Item):
         self.itens.append(item)

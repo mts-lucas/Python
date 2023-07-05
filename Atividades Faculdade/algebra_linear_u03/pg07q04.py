@@ -1,5 +1,5 @@
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 from scipy.optimize import curve_fit
 
 # Given data
@@ -7,8 +7,11 @@ t = np.array([0, 1, 2, 3, 4])
 p = np.array([1.0, 1.8, 3.3, 6.0, 11.0])
 
 # Exponential function
+
+
 def exponential_func(t, a, b):
     return a * np.exp(b * t)
+
 
 # Perform curve fitting
 params, _ = curve_fit(exponential_func, t, p)

@@ -7,7 +7,7 @@ def exponential_func(t, a, b):
 
 
 t = np.array([10, 20, 30, 40, 50])
-Nb = np.array([15000, 215000, 335000, 480000, 770000])
+Nb = np.array([150000, 215000, 335000, 480000, 770000])
 
 params = np.polyfit(t, np.log(Nb), deg=1)
 a = np.exp(params[1])

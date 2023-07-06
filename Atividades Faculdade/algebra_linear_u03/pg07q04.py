@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # Given data
-t = np.array([0, 1, 2, 3, 4])
-p = np.array([1.0, 1.8, 3.3, 6.0, 11.0])
+t_data = np.array([0, 1, 2, 3, 4])
+p_data = np.array([1.0, 1.8, 3.3, 6.0, 11.0])
 
 # Exponential function
 
@@ -13,18 +13,17 @@ def exponential_func(t, a, b):
 
 
 # Perform matrix manipulation
-A = np.column_stack((np.exp(t), t))
-b = np.log(p)
+A = np.column_stack((np.exp(t_data), t_data))
+b = np.log(p_data)
 
-# Solve the linear system
-x, residuals, rank, singular_values = np.linalg.lstsq(A, b, rcond=None)
-
-# Extract the parameters
+# Calculate the parameters using the normal equation
+x = np.linalg.inv(A.T @ A) @ A.T @ b
 a = np.exp(x[0])
 b = x[1]
 
 # Predict the population after 5 hours
-p_pred = exponential_func(5, a, b)
+t_pred = 5
+p_pred = exponential_func(t_pred, a, b)
 
 # Print the parameters and predicted population
 print("Parameters (a, b):", a, b)
@@ -33,8 +32,8 @@ print("Predicted population after 5 hours:", p_pred)
 # Plot the data points and fitted curve
 plt.xlabel('Time (hours)')
 plt.ylabel('Population (thousands)')
-plt.scatter(t, p, label='Data Points')
-plt.plot(t, exponential_func(t, a, b), label='Fitted Curve')
+plt.scatter(t_data, p_data, label='Data Points')
+plt.plot(t_data, exponential_func(t_data, a, b), label='Fitted Curve')
 plt.legend()
 
 # Predict the population for additional hours

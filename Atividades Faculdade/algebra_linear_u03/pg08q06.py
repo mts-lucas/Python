@@ -1,24 +1,27 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy.optimize import curve_fit
 
 
 # Função que representa o modelo d(t)
 def descent_model(t, a, b):
-    return a * t - b * t**2 * np.exp(-0.1 * t)
+    return a * t + b * t**2 * np.exp(-0.1 * t)
 
 
 # Dados observados
 t_data = np.array([5, 10, 15, 20, 25, 30])
 d_data = np.array([30, 83, 126, 157, 169, 190])
 
-# Encontrar os melhores valores de C1 e C2
-optimized_params, _ = curve_fit(
-    descent_model, t_data, d_data)
+# Inicialização dos parâmetros
 
-# Extrair os valores otimizados de C1 e C2
-C1_optimized, C2_optimized = optimized_params
+# Cálculo dos parâmetros utilizando mínimos quadrados
+A = np.column_stack((t_data, t_data**2 * np.exp(-0.1 * t_data)))
+b = d_data
 
+x = np.linalg.inv(A.T @ A) @ A.T @ b
+C1_optimized = x[0]
+C2_optimized = x[1]
+
+# Curva ajustada
 t_curve = np.linspace(min(t_data), max(t_data), 100)
 d_curve = descent_model(t_curve, C1_optimized, C2_optimized)
 

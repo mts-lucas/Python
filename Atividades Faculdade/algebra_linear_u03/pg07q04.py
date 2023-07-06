@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from scipy.optimize import curve_fit
 
 # Given data
 t = np.array([0, 1, 2, 3, 4])
@@ -13,11 +12,16 @@ def exponential_func(t, a, b):
     return a * np.exp(b * t)
 
 
-# Perform curve fitting
-params, _ = curve_fit(exponential_func, t, p)
+# Perform matrix manipulation
+A = np.column_stack((np.exp(t), t))
+b = np.log(p)
+
+# Solve the linear system
+x, residuals, rank, singular_values = np.linalg.lstsq(A, b, rcond=None)
 
 # Extract the parameters
-a, b = params
+a = np.exp(x[0])
+b = x[1]
 
 # Predict the population after 5 hours
 p_pred = exponential_func(5, a, b)

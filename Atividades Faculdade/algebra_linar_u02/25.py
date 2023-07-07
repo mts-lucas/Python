@@ -8,4 +8,5 @@ amp = np.hstack((A, B.reshape(-1, 1)))  # Combine A and B into a single matrix
 
 rref_values = np.round(null_space(amp), decimals=4)
 
-print('A: ',A,'\n\n', 'B: ',B,'\n\n','Amp:',amp,'\n\n','rref_values:',rref_values)
+print('A: ', A, '\n\n', 'B: ', B, '\n\n', 'Amp:',
+      amp, '\n\n', 'rref_values:', rref_values)

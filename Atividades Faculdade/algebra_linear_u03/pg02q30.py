@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 sett = [32, 31.9, 31.8, 32.1, 32.2]
-
 for a in sett:
     A = np.array([[-6, 28, 21],
                   [4, -15, -12],
@@ -17,5 +16,7 @@ for a in sett:
         p[i] = np.linalg.det(A - t[i] * np.eye(A.shape[0]))
 
     plt.plot(t, p)
+
+    print("Autovalores para a =", a, ":", r)
 
 plt.show()

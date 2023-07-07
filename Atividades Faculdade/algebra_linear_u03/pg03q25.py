@@ -2,6 +2,7 @@ import numpy as np
 
 # Given matrix A
 A = np.array([[-3, -2, 0], [14, 7, -1], [-6, 3, 1]])
+print(A)
 
 # Calculate eigenvalues and eigenvectors
 eigenvalues, eigenvectors = np.linalg.eig(A)
